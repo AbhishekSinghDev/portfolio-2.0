@@ -24,7 +24,7 @@ const Navbar = ({ className }: { className?: string }) => {
   return (
     <nav
       className={cn(
-        "py-10 flex justify-between items-center animate-move-down",
+        "py-4 sm:py-10 flex justify-between items-center animate-move-down",
         className
       )}
     >
