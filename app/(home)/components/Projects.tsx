@@ -75,7 +75,7 @@ const Projects = () => {
         SiMongodb,
         SiExpress,
       ],
-      link: "https://internhub-rho.vercel.app/",
+      link: "https://internhub.in",
       cover: "/project-images/internhub.png",
       background: "bg-cyan-500",
     },
