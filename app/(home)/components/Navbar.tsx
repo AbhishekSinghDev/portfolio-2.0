@@ -18,7 +18,7 @@ const Navbar = ({ className }: { className?: string }) => {
       label: "Github",
       icon: SiGithub,
     },
-    { link: "", label: "X", icon: SiX },
+    { link: "https://x.com/AbhishekOG_Dev", label: "X", icon: SiX },
   ];
 
   return (
@@ -37,7 +37,12 @@ const Navbar = ({ className }: { className?: string }) => {
           const Icon = social.icon;
 
           return (
-            <Link href={social.link} key={index} aria-label={social.label}>
+            <Link
+              href={social.link}
+              key={index}
+              aria-label={social.label}
+              target="_blank"
+            >
               <Icon className="w-5 h-5 hover:scale-125 transition-all" />
             </Link>
           );

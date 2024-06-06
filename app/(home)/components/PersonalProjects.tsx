@@ -15,7 +15,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { DirectionAwareHover } from "@/components/ui/direction-hover";
 
-const Projects = () => {
+const PersonalProjects = () => {
   const projects = [
     {
       title: "Pencil.io - Documents & Diagrams",
@@ -132,16 +132,16 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-10 p-5 sm:p-0">
+    <div className="py-10 p-5 sm:p-0 mt-4 sm:mt-12">
       <Title
-        text="Projects 🎨"
+        text="Personal Projects 🎨"
         className="flex flex-col items-center justify-center rotate-6"
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 pt-20 gap-5">
         {projects.map((project, index) => {
           return (
-            <Link href={project.link} key={index}>
+            <Link href={project.link} key={index} target="_blank">
               <div className={cn("p-3 rounded-md", project.background)}>
                 <DirectionAwareHover
                   imageUrl={project.cover}
@@ -165,4 +165,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default PersonalProjects;

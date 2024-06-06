@@ -45,7 +45,8 @@ const HeroSection = () => {
               href="https://drive.google.com/file/d/19SSd5jyVWQpBeuZAklbLRyj8eCHtmLyC/view"
               target="_blank"
             >
-              📢 Available for Work
+              <p>📢 Available for Work</p>
+              <p>{"(" + "click for resume" + ")"}</p>
             </Link>
           </MovingBorderBtn>
         </div>
