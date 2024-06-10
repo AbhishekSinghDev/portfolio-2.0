@@ -42,7 +42,7 @@ const HeroSection = () => {
         <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10">
           <MovingBorderBtn borderRadius="0.5rem" className="p-3 font-semibold">
             <Link
-              href="https://drive.google.com/file/d/19SSd5jyVWQpBeuZAklbLRyj8eCHtmLyC/view"
+              href="https://drive.google.com/file/d/1hbrSLgSR-9GQSzwZF9DTxB6ez6kqPltZ/view"
               target="_blank"
             >
               <p>📢 Available for Work</p>
