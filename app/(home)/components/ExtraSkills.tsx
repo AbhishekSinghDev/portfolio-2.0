@@ -13,22 +13,24 @@ import { SiShadcnui } from "react-icons/si";
 import { SiSocketdotio } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiMongoose } from "react-icons/si";
+import { FaShieldAlt } from "react-icons/fa";
 
 const ExtraSkills = () => {
   const ExtraSkills = [
     { text: "Socket.io", icon: SiSocketdotio, isLearning: false },
     { text: "JWT Token", icon: SiJsonwebtokens, isLearning: false },
+    { text: "Next Auth", icon: FaShieldAlt, isLearning: false },
     { text: "Next.js", icon: SiNextdotjs, isLearning: false },
     { text: "Shadcn", icon: SiShadcnui, isLearning: false },
     { text: "Nextui", icon: SiNextui, isLearning: false },
-    { text: "Tailwindcss", icon: SiTailwindcss, isLearning: false },
+    { text: "Tailwind Css", icon: SiTailwindcss, isLearning: false },
     { text: "Git", icon: SiGit, isLearning: false },
     { text: "Mongoose", icon: SiMongoose, isLearning: false },
-    { text: "Prisma", icon: SiPrisma, isLearning: true },
+    { text: "Prisma", icon: SiPrisma, isLearning: false },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-7xl mx-auto px-8">
       <Title
         text="Bonus Skills 🍒"
         className="flex flex-col items-center justify-center rotate-6"

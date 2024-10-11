@@ -18,7 +18,12 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={cn("grid grid-cols-2  lg:grid-cols-3  py-10", className)}>
+    <div
+      className={cn(
+        "grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  py-10",
+        className
+      )}
+    >
       {items.map((item, idx) => {
         const Icon = item.icon;
 
@@ -46,10 +51,10 @@ export const HoverEffect = ({
                 />
               )}
             </AnimatePresence>
-            <div className="rounded-md w-full p-4 overflow-hidden bg-black group-hover:ring-2 ring-green-500 relative z-20 transition-all duration-500 cursor-pointer">
+            <div className="rounded-md w-full p-1 overflow-hidden bg-black group-hover:ring-2 ring-green-500 relative z-20 transition-all duration-500 cursor-pointer">
               <div className="py-10 z-50 relative space-y-5">
-                <Icon className="w-8 h-8 mx-auto" />
-                <p className="text-2xl font-bold text-center text-gray-300 flex flex-col items-center justify-center gap-1">
+                <Icon className="size-7 md:size-8 mx-auto" />
+                <p className="text-lg md:text-2xl font-bold text-center text-gray-300 flex flex-col items-center justify-center gap-1">
                   {item.text}
                 </p>
                 <div className="w-full flex justify-center">
