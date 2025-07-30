@@ -1,22 +1,44 @@
-import React from "react";
-
-import { SiReact } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiSocketdotio } from "react-icons/si";
-import { SiJsonwebtokens } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { SiStripe } from "react-icons/si";
-import Title from "./Title";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { DirectionAwareHover } from "@/components/ui/direction-hover";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaBrave } from "react-icons/fa6";
+import {
+  SiDrizzle,
+  SiExpress,
+  SiGooglegemini,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNextdotjs,
+  SiReact,
+  SiSocketdotio,
+  SiStripe,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import Title from "./Title";
 
 const PersonalProjects = () => {
   const projects = [
+    {
+      title: "Lunox.ai - Answers based on Web Search and LLM Summarization",
+      tech: [
+        SiNextdotjs,
+        SiReact,
+        SiTypescript,
+        SiTailwindcss,
+        "/inngest.png",
+        SiGooglegemini,
+        FaBrave,
+        SiDrizzle,
+        BiLogoPostgresql,
+      ],
+      link: "https://lunox.abhisheksingh.me",
+      cover: "/project-images/lunox.png",
+      background: "bg-purple-500",
+    },
     {
       title: "Pencil.io - Documents & Diagrams",
       tech: [
@@ -29,7 +51,7 @@ const PersonalProjects = () => {
         SiMongodb,
         SiStripe,
       ],
-      link: "https://pencil-io.vercel.app/",
+      link: "https://pencil-io.abhisheksingh.me",
       cover: "/project-images/pencil-io.png",
       background: "bg-indigo-500",
     },
@@ -44,7 +66,7 @@ const PersonalProjects = () => {
         SiMongodb,
         SiStripe,
       ],
-      link: "https://event-ocean.vercel.app/",
+      link: "https://event-ocean.abhisheksingh.me/",
       cover: "/project-images/event-ocean.png",
       background: "bg-green-500",
     },
@@ -89,7 +111,7 @@ const PersonalProjects = () => {
         SiJsonwebtokens,
         SiMongodb,
       ],
-      link: "https://prompthub-egco.vercel.app/",
+      link: "https://prompthub.abhisheksingh.me",
       cover: "/project-images/prompt-hub.png",
       background: "bg-orange-500",
     },
@@ -151,7 +173,18 @@ const PersonalProjects = () => {
                     <h1 className="text-xl font-bold">{project.title}</h1>
                     <div className="flex items-center gap-5">
                       {project.tech.map((Icon, index) => {
-                        return <Icon key={index} className="w-7 h-7" />;
+                        return typeof Icon === "string" ? (
+                          <Image
+                            key={index}
+                            src={Icon}
+                            alt="Tech Icon"
+                            width={24}
+                            height={24}
+                            className="w-6 h-6"
+                          />
+                        ) : (
+                          <Icon key={index} className="w-6 h-6 text-white" />
+                        );
                       })}
                     </div>
                   </div>

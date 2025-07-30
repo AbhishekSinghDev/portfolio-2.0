@@ -1,25 +1,22 @@
-import React from "react";
-
-import Title from "./Title";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Title from "./Title";
 
-import { SiReact } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiJsonwebtokens } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { SiRazorpay } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { SiNextui } from "react-icons/si";
-import { SiPrisma } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiShadcnui } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
-import { SiMongoose } from "react-icons/si";
+import { FaAws, FaNodeJs } from "react-icons/fa";
+import {
+  SiExpress,
+  SiJsonwebtokens,
+  SiMongoose,
+  SiNextdotjs,
+  SiNextui,
+  SiPrisma,
+  SiRazorpay,
+  SiShadcnui,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 import { DirectionAwareHover } from "@/components/ui/direction-hover";
 

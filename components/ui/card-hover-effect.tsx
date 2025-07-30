@@ -1,8 +1,9 @@
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { IconType } from "react-icons";
-import { Badge } from "@/components/ui/badge";
 
 export const HoverEffect = ({
   items,
@@ -10,7 +11,7 @@ export const HoverEffect = ({
 }: {
   items: {
     text: string;
-    icon: IconType;
+    icon: IconType | string;
     isLearning: boolean;
   }[];
   className?: string;
@@ -53,7 +54,19 @@ export const HoverEffect = ({
             </AnimatePresence>
             <div className="rounded-md w-full p-1 overflow-hidden bg-black group-hover:ring-2 ring-green-500 relative z-20 transition-all duration-500 cursor-pointer">
               <div className="py-10 z-50 relative space-y-5">
-                <Icon className="size-7 md:size-8 mx-auto" />
+                {typeof Icon === "string" ? (
+                  <div className="relative size-7 md:size-8 mx-auto">
+                    <Image
+                      src={Icon}
+                      alt="logo"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <Icon className="size-7 md:size-8 mx-auto" />
+                )}
+
                 <p className="text-lg md:text-2xl font-bold text-center text-gray-300 flex flex-col items-center justify-center gap-1">
                   {item.text}
                 </p>

@@ -1,11 +1,11 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
 import CoreSkills from "./components/CoreSkills";
 import Footer from "./components/Footer";
-import ExtraSkills from "./components/ExtraSkills";
+import HeroSection from "./components/HeroSection";
+import LibsSkills from "./components/LibsSkills";
+import Navbar from "./components/Navbar";
 import PersonalProjects from "./components/PersonalProjects";
-import FreelanceProjects from "./components/FreelanceProjects";
+
+export const dynamic = "force-static";
 
 const page = () => {
   return (
@@ -19,8 +19,7 @@ const page = () => {
       </div>
       <div className="max-w-7xl mx-auto p-5 mt-20">
         <CoreSkills />
-        <ExtraSkills />
-        <FreelanceProjects />
+        <LibsSkills />
         <PersonalProjects />
         <Footer />
       </div>
