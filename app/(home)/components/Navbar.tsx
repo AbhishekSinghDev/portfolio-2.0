@@ -7,7 +7,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = ({ className }: { className?: string }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -93,22 +92,19 @@ const Navbar = ({ className }: { className?: string }) => {
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex items-center gap-1">
         {navLinks.map((link, index) => (
-          <a
+          <Link
             key={index}
             href={link.href}
             onClick={(e) => handleSmoothScroll(e, link.href)}
             className="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-neutral-800/50 transition-all duration-300 text-sm font-medium cursor-pointer"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
 
       {/* Social Links & Theme Toggle */}
       <div className="flex items-center gap-2">
-        {/* Theme Toggle */}
-        <ThemeToggle />
-
         {socials.map((social, index) => {
           const Icon = social.icon;
           return (
