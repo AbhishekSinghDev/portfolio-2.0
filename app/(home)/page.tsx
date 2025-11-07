@@ -2,7 +2,6 @@ import dynamic from "next/dynamic";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 
-// Dynamically import heavy components with loading states
 const WorkExperience = dynamic(() => import("./components/WorkExperience"), {
   loading: () => (
     <div className="h-screen animate-pulse bg-secondary rounded-lg" />
@@ -39,8 +38,8 @@ export const dynamicParams = false;
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden transition-colors duration-300">
-      <div className="bg-background bg-grid-white/[0.02] relative">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <div className="bg-background bg-grid-white/[0.02] relative overflow-hidden">
         <div className="max-w-7xl mx-auto p-5">
           <Navbar />
           <HeroSection />
@@ -59,7 +58,6 @@ const page = () => {
           <LibsSkills />
         </div>
         <div id="projects">
-          {/* <FreelanceProjects /> */}
           <PersonalProjects />
         </div>
         <div id="contact">

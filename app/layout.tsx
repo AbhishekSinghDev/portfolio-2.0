@@ -1,3 +1,4 @@
+import { LenisScroll } from "@/components/lenis-scroll";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -13,8 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abhishek-singh-dev-2.vercel.app/"),
-
+  metadataBase: new URL("https://abhisheksingh.me/"),
   title: "Abhishek Singh",
   authors: {
     name: "abhishek singh",
@@ -25,13 +25,12 @@ export const metadata: Metadata = {
     title: "Abhishek Singh",
     description:
       "Based in Delhi, I'm a Fullstack developer passionate about building a modern web application that users love.",
-    url: "https://abhishek-singh-dev-2.vercel.app/",
+    url: "https://abhisheksingh.me/",
     siteName: "Abhishek Singh",
-    images: "/abhishek.png",
+    images: "/me.png",
     type: "website",
   },
-
-  keywords: ["full stack developer", "abhishek singh", "siyanop"],
+  keywords: ["full stack developer", "abhishek singh"],
 };
 
 export default function RootLayout({
@@ -54,6 +53,7 @@ export default function RootLayout({
           forcedTheme="dark"
         >
           {children}
+          <LenisScroll />
         </ThemeProvider>
       </body>
     </html>
