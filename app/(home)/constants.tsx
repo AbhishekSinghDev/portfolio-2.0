@@ -15,6 +15,7 @@ import {
   SiExpo,
   SiExpress,
   SiGithub,
+  SiGoogle,
   SiGooglegemini,
   SiJavascript,
   SiJsonwebtokens,
@@ -34,6 +35,8 @@ import {
   SiTrpc,
   SiTurborepo,
   SiTypescript,
+  SiUpstash,
+  SiVercel,
   SiX,
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
@@ -361,6 +364,28 @@ export const FREELANCE_PROJECTS = [
 
 // ==================== PERSONAL PROJECTS ====================
 export const PERSONAL_PROJECTS = [
+  {
+    title: "Youth AF",
+    subtitle: "Computer Science Learning Platform",
+    description:
+      "No fluff. No overcomplications. Just solid CS learning. Master programming, algorithms, data structures, and computer science fundamentals with practical, hands-on tutorials, notes, and resources for Classes 9-12.",
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js" },
+      { icon: SiReact, name: "React" },
+      { icon: SiTypescript, name: "TypeScript" },
+      { icon: SiTailwindcss, name: "Tailwind CSS" },
+      { icon: SiDrizzle, name: "Drizzle ORM" },
+      { icon: BiLogoPostgresql, name: "PostgreSQL" },
+      { icon: SiVercel, name: "Vercel" },
+      { icon: SiGoogle, name: "Google Adsense" },
+      { icon: FaAws, name: "AWS S3" },
+      { icon: SiUpstash, name: "Upstash Redis" },
+    ],
+    link: "https://youth-af.com",
+    cover: "project-images/youth-af.png",
+    gradient: "from-[#7A7FEE] to-[#FF6B8B]",
+    tags: ["Education", "Computer Science", "Full Stack", "Next.js"],
+  },
   {
     title: "Lunox.ai",
     subtitle: "Web Search + LLM Summarization",

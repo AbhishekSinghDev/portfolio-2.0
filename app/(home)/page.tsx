@@ -1,5 +1,6 @@
 import CoreSkills from "./components/CoreSkills";
 import Education from "./components/Education";
+import FeaturedProject from "./components/FeaturedProject";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import LibsSkills from "./components/LibsSkills";
@@ -30,6 +31,7 @@ const page = () => {
           <CoreSkills />
           <LibsSkills />
         </div>
+        <FeaturedProject />
         <div id="projects">
           {/* <FreelanceProjects /> */}
           <PersonalProjects />
