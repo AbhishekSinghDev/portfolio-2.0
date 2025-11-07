@@ -1,13 +1,49 @@
-import CoreSkills from "./components/CoreSkills";
-import Education from "./components/Education";
-import Footer from "./components/Footer";
+import dynamic from "next/dynamic";
 import HeroSection from "./components/HeroSection";
-import LibsSkills from "./components/LibsSkills";
 import Navbar from "./components/Navbar";
-import PersonalProjects from "./components/PersonalProjects";
-import WorkExperience from "./components/WorkExperience";
 
-export const dynamic = "force-static";
+// Dynamically import heavy components with loading states
+const WorkExperience = dynamic(() => import("./components/WorkExperience"), {
+  loading: () => (
+    <div className="h-screen animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+  ),
+});
+
+const Education = dynamic(() => import("./components/Education"), {
+  loading: () => (
+    <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+  ),
+});
+
+const CoreSkills = dynamic(() => import("./components/CoreSkills"), {
+  loading: () => (
+    <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+  ),
+});
+
+const LibsSkills = dynamic(() => import("./components/LibsSkills"), {
+  loading: () => (
+    <div className="h-96 animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+  ),
+});
+
+const PersonalProjects = dynamic(
+  () => import("./components/PersonalProjects"),
+  {
+    loading: () => (
+      <div className="h-screen animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+    ),
+  }
+);
+
+const Footer = dynamic(() => import("./components/Footer"), {
+  loading: () => (
+    <div className="h-32 animate-pulse bg-gray-100 dark:bg-gray-900 rounded-lg" />
+  ),
+});
+
+// Force static generation
+export const dynamicParams = false;
 
 const page = () => {
   return (

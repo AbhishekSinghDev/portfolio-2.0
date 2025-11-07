@@ -146,7 +146,7 @@ const Navbar = ({ className }: { className?: string }) => {
           <div className="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-lg border border-gray-300 dark:border-neutral-800 rounded-xl shadow-2xl overflow-hidden">
             <div className="p-4 space-y-2">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
                   href={link.href}
                   onClick={(e) => {
@@ -156,7 +156,7 @@ const Navbar = ({ className }: { className?: string }) => {
                   className="block px-4 py-3 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-neutral-800/50 transition-all duration-300 text-sm font-medium cursor-pointer"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

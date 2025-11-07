@@ -1,6 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
 import {
+  LazyMotion,
+  domAnimation,
   motion,
   useAnimationFrame,
   useMotionTemplate,
@@ -29,42 +31,44 @@ export function MovingBorderBtn({
   [key: string]: any;
 }) {
   return (
-    <Component
-      className={cn(
-        "bg-transparent relative text-xl p-[1px] overflow-hidden ",
-        containerClassName
-      )}
-      style={{
-        borderRadius: borderRadius,
-      }}
-      {...otherProps}
-    >
-      <div
-        className="absolute inset-0"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
-      >
-        <MovingBorder duration={duration} rx="30%" ry="30%">
-          <div
-            className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
-              borderClassName
-            )}
-          />
-        </MovingBorder>
-      </div>
-
-      <div
+    <LazyMotion features={domAnimation} strict>
+      <Component
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
-          className
+          "bg-transparent relative text-xl p-[1px] overflow-hidden ",
+          containerClassName
         )}
         style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
+          borderRadius: borderRadius,
         }}
+        {...otherProps}
       >
-        {children}
-      </div>
-    </Component>
+        <div
+          className="absolute inset-0"
+          style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        >
+          <MovingBorder duration={duration} rx="30%" ry="30%">
+            <div
+              className={cn(
+                "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
+                borderClassName
+              )}
+            />
+          </MovingBorder>
+        </div>
+
+        <div
+          className={cn(
+            "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+            className
+          )}
+          style={{
+            borderRadius: `calc(${borderRadius} * 0.96)`,
+          }}
+        >
+          {children}
+        </div>
+      </Component>
+    </LazyMotion>
   );
 }
 

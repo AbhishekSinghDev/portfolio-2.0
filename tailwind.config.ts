@@ -10,10 +10,9 @@ const {
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
+    // Be specific to avoid scanning unnecessary files
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {

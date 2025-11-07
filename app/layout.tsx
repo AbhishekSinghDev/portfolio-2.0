@@ -4,7 +4,13 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abhishek-singh-dev-2.vercel.app/"),
@@ -34,7 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressContentEditableWarning className="scroll-smooth">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn("scroll-smooth", spaceGrotesk.variable)}
+    >
       <body className={cn(spaceGrotesk.className)}>
         <ThemeProvider
           attribute="class"
