@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { HiDownload, HiMail } from "react-icons/hi";
 import { MovingBorderBtn } from "../../../components/ui/moving-border";
@@ -75,7 +76,7 @@ const HeroSection = () => {
           {HERO_STATS.map((stat, index) => (
             <div key={index} className="flex items-center gap-6">
               <div className="text-center">
-                <p className="text-3xl font-bold text-green-600 dark:text-green-400">
+                <p className={cn("text-3xl font-bold", stat.color)}>
                   {stat.value}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-500">
@@ -177,8 +178,8 @@ const HeroSection = () => {
                 key={index}
                 className="absolute animate-float pointer-events-auto"
                 style={{
-                  top: `${20 + index * 15}%`,
-                  left: `${10 + index * 18}%`,
+                  top: `${70 + index * 1}%`,
+                  left: `${3 + index * 20}%`,
                   animationDelay: item.delay,
                 }}
               >

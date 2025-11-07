@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { HiCode, HiHeart, HiMail } from "react-icons/hi";
 import { FOOTER_QUICK_LINKS, PERSONAL_INFO, SOCIAL_LINKS } from "../constants";
@@ -15,8 +16,13 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center font-bold text-white text-xl shadow-lg">
-                A
+              <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
+                <Image
+                  src="https://avatars.githubusercontent.com/u/115893943?v=4"
+                  fill
+                  alt="Abhishek Singh"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">

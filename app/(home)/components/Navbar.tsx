@@ -69,7 +69,7 @@ const Navbar = ({ className }: { className?: string }) => {
       <Link href="/" className="group">
         <div className="flex items-center gap-3">
           {/* Logo Icon */}
-          <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-lg">
             <Image
               src="https://avatars.githubusercontent.com/u/115893943?v=4"
               fill

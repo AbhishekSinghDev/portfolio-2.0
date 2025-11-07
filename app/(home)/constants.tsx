@@ -68,9 +68,9 @@ export const HERO_DESCRIPTION = {
 };
 
 export const HERO_STATS = [
-  { value: "1+", label: "Years Experience" },
-  { value: "15+", label: "Projects Built" },
-  { value: "2", label: "Companies Served" },
+  { value: "1+", label: "Years Experience", color: "text-green-500" },
+  { value: "15+", label: "Projects Built", color: "text-blue-500" },
+  { value: "2", label: "Companies Served", color: "text-purple-500" },
 ];
 
 export const FLOATING_ICONS = [
@@ -383,8 +383,14 @@ export const PERSONAL_PROJECTS = [
     ],
     link: "https://youth-af.com",
     cover: "project-images/youth-af.png",
-    gradient: "from-[#7A7FEE] to-[#FF6B8B]",
+    gradient: "from-amber-500 to-yellow-500",
     tags: ["Education", "Computer Science", "Full Stack", "Next.js"],
+    highlighted: true,
+    stats: [
+      { label: "Daily Visitors", value: "200+" },
+      { label: "Lifetime Visitors", value: "50K+" },
+      { label: "Total Requests", value: "2M+" },
+    ],
   },
   {
     title: "Lunox.ai",
@@ -447,10 +453,10 @@ export const PERSONAL_PROJECTS = [
     tags: ["Event Management", "Tickets", "SaaS"],
   },
   {
-    title: "Word Web",
-    subtitle: "Stay Curious",
+    title: "PromptHub",
+    subtitle: "Discover & Share AI Prompts",
     description:
-      "Educational platform for vocabulary building and word learning with interactive features and progress tracking.",
+      "Community platform for discovering, sharing, and rating AI prompts for various use cases and models.",
     tech: [
       { icon: SiNextdotjs, name: "Next.js" },
       { icon: SiReact, name: "React" },
@@ -458,12 +464,11 @@ export const PERSONAL_PROJECTS = [
       { icon: SiTailwindcss, name: "Tailwind" },
       { icon: SiJsonwebtokens, name: "JWT" },
       { icon: SiMongodb, name: "MongoDB" },
-      { icon: SiExpress, name: "Express" },
     ],
-    link: "https://word-web-sigma.vercel.app/",
-    cover: "/project-images/word-web.png",
-    gradient: "from-pink-500 to-rose-500",
-    tags: ["Education", "Full Stack", "Learning"],
+    link: "https://prompt-hub.abhisheksingh.me",
+    cover: "/project-images/prompt-hub.png",
+    gradient: "from-orange-500 to-red-500",
+    tags: ["AI", "Community", "Prompts"],
   },
   {
     title: "Internhub",
@@ -483,24 +488,6 @@ export const PERSONAL_PROJECTS = [
     cover: "/project-images/internhub.png",
     gradient: "from-cyan-500 to-blue-500",
     tags: ["Placement", "College", "Management"],
-  },
-  {
-    title: "PromptHub",
-    subtitle: "Discover & Share AI Prompts",
-    description:
-      "Community platform for discovering, sharing, and rating AI prompts for various use cases and models.",
-    tech: [
-      { icon: SiNextdotjs, name: "Next.js" },
-      { icon: SiReact, name: "React" },
-      { icon: SiJavascript, name: "JavaScript" },
-      { icon: SiTailwindcss, name: "Tailwind" },
-      { icon: SiJsonwebtokens, name: "JWT" },
-      { icon: SiMongodb, name: "MongoDB" },
-    ],
-    link: "https://prompthub.abhisheksingh.me",
-    cover: "/project-images/prompt-hub.png",
-    gradient: "from-orange-500 to-red-500",
-    tags: ["AI", "Community", "Prompts"],
   },
   {
     title: "Flixify",
@@ -538,6 +525,25 @@ export const PERSONAL_PROJECTS = [
     cover: "/project-images/livecode.png",
     gradient: "from-lime-500 to-green-500",
     tags: ["Real-time", "Collaboration", "IDE"],
+  },
+  {
+    title: "Word Web",
+    subtitle: "Stay Curious",
+    description:
+      "Educational platform for vocabulary building and word learning with interactive features and progress tracking.",
+    tech: [
+      { icon: SiNextdotjs, name: "Next.js" },
+      { icon: SiReact, name: "React" },
+      { icon: SiJavascript, name: "JavaScript" },
+      { icon: SiTailwindcss, name: "Tailwind" },
+      { icon: SiJsonwebtokens, name: "JWT" },
+      { icon: SiMongodb, name: "MongoDB" },
+      { icon: SiExpress, name: "Express" },
+    ],
+    link: "https://word-web-sigma.vercel.app/",
+    cover: "/project-images/word-web.png",
+    gradient: "from-pink-500 to-rose-500",
+    tags: ["Education", "Full Stack", "Learning"],
   },
   {
     title: "Medicare",
