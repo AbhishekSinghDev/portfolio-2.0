@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { LIBRARIES_CATEGORIES } from "../constants";
+import { LIBRARIES_CATEGORIES } from "../constants/skills";
 import Title from "./Title";
 
 const LibsSkills = () => {
@@ -12,70 +12,61 @@ const LibsSkills = () => {
         className="flex flex-col items-center justify-center"
       />
 
-      <div className="mt-20 space-y-6">
+      {/* Compact Grid Layout - All categories in one view */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {LIBRARIES_CATEGORIES.map((category, catIndex) => (
           <div
             key={catIndex}
-            className="relative group border border-gray-300 dark:border-neutral-800 rounded-xl p-6 bg-white/30 dark:bg-neutral-900/30 backdrop-blur hover:border-gray-400 dark:hover:border-neutral-700 transition-all duration-300"
+            className="relative group border border-border rounded-lg p-4 bg-card/50 backdrop-blur hover:border-accent transition-all duration-300 hover:bg-card"
           >
-            {/* Category Header with Gradient */}
-            <div className="flex items-center gap-3 mb-6">
-              <div
-                className={`h-1 w-12 rounded-full bg-gradient-to-r ${category.gradient}`}
-              ></div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            {/* Compact Category Header */}
+            <div className="flex items-center gap-2 mb-3">
+              <div className="h-0.5 w-8 rounded-full bg-accent"></div>
+              <h3 className="text-sm sm:text-base font-bold text-foreground whitespace-nowrap">
                 {category.title}
               </h3>
-              <div
-                className={`h-1 flex-1 rounded-full bg-gradient-to-r ${category.gradient} opacity-20`}
-              ></div>
+              <div className="h-0.5 flex-1 rounded-full bg-border"></div>
             </div>
 
-            {/* Skills Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {/* Compact Skills List with Horizontal Layout */}
+            <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, skillIndex) => {
                 const Icon = skill.type === "icon" ? skill.icon : null;
                 return (
                   <div
                     key={skillIndex}
-                    className="relative flex flex-col items-center justify-center p-4 rounded-lg bg-gray-100 dark:bg-black/40 border border-gray-300 dark:border-neutral-800 hover:border-gray-400 dark:hover:border-neutral-600 transition-all duration-300 hover:scale-105 group/item"
+                    className="group/item flex items-center gap-1.5 px-2.5 py-1.5 rounded-md bg-secondary/50 border border-border hover:border-accent transition-all duration-300 hover:scale-105 hover:bg-secondary"
                   >
-                    {/* Icon or Image */}
-                    <div className="mb-3">
-                      {skill.type === "image" ? (
-                        <div className="relative w-10 h-10">
-                          <Image
-                            src={skill.icon as string}
-                            alt={skill.text}
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      ) : (
-                        Icon && (
-                          <Icon className="w-10 h-10 text-gray-600 dark:text-gray-300 group-hover/item:text-gray-900 dark:group-hover/item:text-white transition-colors" />
-                        )
-                      )}
-                    </div>
+                    {/* Icon or Image - Smaller */}
+                    {skill.type === "image" ? (
+                      <div className="relative w-4 h-4 flex-shrink-0">
+                        <Image
+                          src={skill.icon as string}
+                          alt={skill.text}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      Icon && (
+                        <Icon className="w-4 h-4 flex-shrink-0 text-muted-foreground group-hover/item:text-accent transition-colors" />
+                      )
+                    )}
 
-                    {/* Skill Name */}
-                    <p className="text-xs text-center text-gray-600 dark:text-gray-400 group-hover/item:text-gray-900 dark:group-hover/item:text-gray-200 transition-colors font-medium">
+                    {/* Skill Name - Inline */}
+                    <span className="text-xs text-muted-foreground group-hover/item:text-foreground transition-colors font-medium whitespace-nowrap">
                       {skill.text}
-                    </p>
+                    </span>
 
-                    {/* Hover Gradient Effect */}
-                    <div
-                      className={`absolute inset-0 rounded-lg bg-gradient-to-br ${category.gradient} opacity-0 group-hover/item:opacity-5 transition-opacity duration-300 -z-10`}
-                    ></div>
+                    {/* Hover Effect */}
+                    <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover/item:opacity-5 transition-opacity duration-300 -z-10"></div>
                   </div>
                 );
               })}
             </div>
 
-            {/* Background Gradient on Hover */}
-            <div
-              className={`absolute inset-0 rounded-xl bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 -z-10`}
-            ></div>
+            {/* Background Effect on Hover */}
+            <div className="absolute inset-0 rounded-lg bg-accent opacity-0 group-hover:opacity-5 transition-opacity duration-500 -z-10"></div>
           </div>
         ))}
       </div>

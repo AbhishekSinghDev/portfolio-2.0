@@ -4,7 +4,7 @@ export const WORK_EXPERIENCES = [
     company: "SK Aggarwal and Co",
     role: "Full Stack Engineer",
     period: "September 2025 - Present",
-    location: "Delhi, India",
+    location: "Haryana, India",
     project: "Earnex Rewards - Loyalty Rewards Platform",
     highlights: [
       "Architected enterprise-grade monorepo using Turborepo with 5 interconnected applications",
@@ -24,13 +24,12 @@ export const WORK_EXPERIENCES = [
       "Gemini AI",
       "Inngest",
     ],
-    gradient: "from-green-400 to-blue-500",
   },
   {
     company: "Nextfly Technologies Pvt. Ltd.",
     role: "Full Stack Developer",
     period: "August 2024 - August 2025",
-    location: "Remote",
+    location: "Haryana, India",
     project: "Scraplo & MyDeer",
     highlights: [
       "Engineered scrap marketplace serving 5 user types with region-based pricing architecture",
@@ -49,6 +48,5 @@ export const WORK_EXPERIENCES = [
       "Socket.io",
       "Razorpay",
     ],
-    gradient: "from-purple-400 to-pink-500",
   },
 ];

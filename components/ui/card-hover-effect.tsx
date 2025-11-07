@@ -1,9 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { Icon } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { IconType } from "react-icons";
 
 export const HoverEffect = ({
   items,
@@ -11,7 +11,7 @@ export const HoverEffect = ({
 }: {
   items: {
     text: string;
-    icon: IconType | string;
+    icon: Icon | string;
     isLearning: boolean;
   }[];
   className?: string;

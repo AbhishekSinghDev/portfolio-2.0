@@ -1,11 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { IconExternalLink } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { HiExternalLink } from "react-icons/hi";
-import { FREELANCE_PROJECTS } from "../constants";
+import { FREELANCE_PROJECTS } from "../constants/projects";
 import Title from "./Title";
 
 const FreelanceProjects = () => {
@@ -43,12 +43,12 @@ const FreelanceProjects = () => {
                   <div
                     className={cn(
                       "absolute inset-0 bg-gradient-to-br opacity-40 group-hover:opacity-30 transition-opacity duration-300",
-                      `bg-gradient-to-br ${project.gradient}`
+                      "from-purple-500 to-pink-500"
                     )}
                   ></div>
                   {/* External Link Icon */}
                   <div className="absolute top-4 right-4 p-2 bg-black/50 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <HiExternalLink className="w-5 h-5 text-white" />
+                    <IconExternalLink className="w-5 h-5 text-white" />
                   </div>
                 </div>
 
@@ -64,8 +64,7 @@ const FreelanceProjects = () => {
                         <span
                           key={tagIndex}
                           className={cn(
-                            "px-2.5 py-1 text-xs font-medium rounded-full bg-gradient-to-r text-white",
-                            project.gradient
+                            "px-2.5 py-1 text-xs font-medium rounded-full bg-gradient-to-r text-white from-purple-500 to-pink-500"
                           )}
                         >
                           {tag}
@@ -108,12 +107,11 @@ const FreelanceProjects = () => {
                       className={cn(
                         "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
                         "bg-gradient-to-r text-white",
-                        project.gradient,
                         "opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
                       )}
                     >
                       View Project
-                      <HiExternalLink className="w-4 h-4" />
+                      <IconExternalLink className="w-4 h-4" />
                     </div>
                   </div>
                 </div>
@@ -122,7 +120,7 @@ const FreelanceProjects = () => {
                 <div
                   className={cn(
                     "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none",
-                    `bg-gradient-to-br ${project.gradient}`
+                    "bg-gradient-to-br from-purple-500 to-pink-500"
                   )}
                 ></div>
               </div>

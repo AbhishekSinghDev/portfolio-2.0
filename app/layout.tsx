@@ -43,14 +43,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("scroll-smooth", spaceGrotesk.variable)}
+      className={cn("dark scroll-smooth", spaceGrotesk.variable)}
     >
       <body className={cn(spaceGrotesk.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
+          forcedTheme="dark"
         >
           {children}
         </ThemeProvider>

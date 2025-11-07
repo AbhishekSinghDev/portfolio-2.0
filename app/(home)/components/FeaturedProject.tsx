@@ -1,23 +1,26 @@
 "use client";
 
 import { MovingBorderBtn } from "@/components/ui/moving-border";
+import {
+  IconActivity,
+  IconBrandAws,
+  IconBrandGoogle,
+  IconBrandNextjs,
+  IconBrandReact,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandVercel,
+  IconChartBar,
+  IconCloud,
+  IconDatabase,
+  IconExternalLink,
+  IconSparkles,
+  IconTrendingUp,
+  IconUsers,
+} from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaAws } from "react-icons/fa";
-import { FiActivity, FiBarChart2, FiUsers } from "react-icons/fi";
-import { HiExternalLink, HiSparkles, HiTrendingUp } from "react-icons/hi";
-import {
-  SiDrizzle,
-  SiGoogle,
-  SiNextdotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiUpstash,
-  SiVercel,
-} from "react-icons/si";
 
 const FEATURED_PROJECT = {
   title: "Youth AF",
@@ -28,19 +31,19 @@ const FEATURED_PROJECT = {
   cover: "/project-images/youth-af.png",
   stats: [
     {
-      icon: FiUsers,
+      icon: IconUsers,
       value: "50K+",
       label: "Total Visitors",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      icon: FiBarChart2,
+      icon: IconChartBar,
       value: "1.5M+",
       label: "Total Requests",
       gradient: "from-purple-500 to-pink-500",
     },
     {
-      icon: FiActivity,
+      icon: IconActivity,
       value: "200+",
       label: "Daily Active Users",
       gradient: "from-green-500 to-emerald-500",
@@ -48,19 +51,23 @@ const FEATURED_PROJECT = {
   ],
   tech: [
     {
-      icon: SiNextdotjs,
+      icon: IconBrandNextjs,
       name: "Next.js",
       color: "text-gray-800 dark:text-white",
     },
-    { icon: SiReact, name: "React", color: "text-cyan-500" },
-    { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: SiTailwindcss, name: "Tailwind", color: "text-cyan-400" },
-    { icon: SiDrizzle, name: "Drizzle ORM", color: "text-green-500" },
-    { icon: BiLogoPostgresql, name: "PostgreSQL", color: "text-blue-600" },
-    { icon: SiVercel, name: "Vercel", color: "text-gray-800 dark:text-white" },
-    { icon: SiGoogle, name: "Google Adsense", color: "text-red-500" },
-    { icon: FaAws, name: "AWS S3", color: "text-orange-500" },
-    { icon: SiUpstash, name: "Upstash Redis", color: "text-green-400" },
+    { icon: IconBrandReact, name: "React", color: "text-cyan-500" },
+    { icon: IconBrandTypescript, name: "TypeScript", color: "text-blue-500" },
+    { icon: IconBrandTailwind, name: "Tailwind", color: "text-cyan-400" },
+    { icon: IconDatabase, name: "Drizzle ORM", color: "text-green-500" },
+    { icon: IconDatabase, name: "PostgreSQL", color: "text-blue-600" },
+    {
+      icon: IconBrandVercel,
+      name: "Vercel",
+      color: "text-gray-800 dark:text-white",
+    },
+    { icon: IconBrandGoogle, name: "Google Adsense", color: "text-red-500" },
+    { icon: IconBrandAws, name: "AWS S3", color: "text-orange-500" },
+    { icon: IconCloud, name: "Upstash Redis", color: "text-green-400" },
   ],
   highlights: [
     "🎯 Serving 50K+ students with quality CS education",
@@ -89,11 +96,11 @@ export default function FeaturedProject() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <HiSparkles className="text-2xl text-yellow-500 animate-pulse" />
+            <IconSparkles className="text-2xl text-yellow-500 animate-pulse" />
             <span className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Featured Project
             </span>
-            <HiSparkles className="text-2xl text-yellow-500 animate-pulse" />
+            <IconSparkles className="text-2xl text-yellow-500 animate-pulse" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
             My Proudest Achievement
@@ -195,7 +202,7 @@ export default function FeaturedProject() {
                     >
                       <div className="flex items-center justify-center gap-2 px-8 py-3">
                         <span>Visit Live Project</span>
-                        <HiExternalLink className="text-xl group-hover:translate-x-1 transition-transform" />
+                        <IconExternalLink className="text-xl group-hover:translate-x-1 transition-transform" />
                       </div>
                     </MovingBorderBtn>
                   </Link>
@@ -248,7 +255,7 @@ export default function FeaturedProject() {
                                 </div>
                               </div>
                             </div>
-                            <HiTrendingUp
+                            <IconTrendingUp
                               className={`text-3xl bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}
                             />
                           </div>

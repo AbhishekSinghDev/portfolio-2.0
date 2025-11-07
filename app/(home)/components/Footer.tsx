@@ -1,22 +1,23 @@
 "use client";
 
+import { IconCode, IconHeart, IconMail } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { HiCode, HiHeart, HiMail } from "react-icons/hi";
-import { FOOTER_QUICK_LINKS, PERSONAL_INFO, SOCIAL_LINKS } from "../constants";
+import { PERSONAL_INFO } from "../constants/personal";
+import { FOOTER_QUICK_LINKS, SOCIAL_LINKS } from "../constants/social";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 border-t border-gray-300 dark:border-neutral-800">
+    <footer className="mt-20 border-t border-border">
       <div className="py-12 px-5 md:px-0 space-y-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-accent/50 transition-all duration-300 group-hover:scale-110">
                 <Image
                   src="https://avatars.githubusercontent.com/u/115893943?v=4"
                   fill
@@ -25,26 +26,26 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-bold text-foreground">
                   {PERSONAL_INFO.name}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-500">
+                <p className="text-xs text-muted-foreground">
                   {PERSONAL_INFO.role}
                 </p>
               </div>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {PERSONAL_INFO.description}
             </p>
-            <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-500">
-              <HiCode className="w-4 h-4 text-green-600 dark:text-green-400" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <IconCode className="w-4 h-4 text-accent" />
               <span>Based in {PERSONAL_INFO.location}</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -52,9 +53,9 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <span className="w-0 h-px bg-green-600 dark:bg-green-400 group-hover:w-4 transition-all duration-300"></span>
+                    <span className="w-0 h-px bg-accent group-hover:w-4 transition-all duration-300"></span>
                     {link.label}
                   </a>
                 </li>
@@ -64,16 +65,16 @@ const Footer = () => {
 
           {/* Connect Section */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider">
               Let&apos;s Connect
             </h4>
             <div className="space-y-3">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300 group"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors duration-300 group"
               >
-                <div className="p-2 rounded-lg bg-gray-100 dark:bg-neutral-900 border border-gray-300 dark:border-neutral-800 group-hover:border-green-500/50 transition-all duration-300">
-                  <HiMail className="w-4 h-4" />
+                <div className="p-2 rounded-lg bg-secondary border border-border group-hover:border-accent transition-all duration-300">
+                  <IconMail className="w-4 h-4" />
                 </div>
                 <span>{PERSONAL_INFO.email}</span>
               </a>
@@ -88,7 +89,7 @@ const Footer = () => {
                       aria-label={social.label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-2.5 rounded-lg bg-gray-100 dark:bg-neutral-900 border border-gray-300 dark:border-neutral-800 text-gray-600 dark:text-gray-400 hover:border-gray-400 dark:hover:border-neutral-700 transition-all duration-300 hover:scale-110 ${social.color}`}
+                      className="p-2.5 rounded-lg bg-secondary border border-border text-muted-foreground hover:border-accent hover:text-foreground transition-all duration-300 hover:scale-110"
                       title={social.label}
                     >
                       <Icon className="w-4 h-4" />
@@ -101,30 +102,28 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-300 dark:border-neutral-800"></div>
+        <div className="border-t border-border"></div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-500">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>
               © {currentYear} {PERSONAL_INFO.name}.
             </span>
             <span className="hidden sm:inline">All rights reserved.</span>
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-500">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>Made with</span>
-            <HiHeart className="w-4 h-4 text-red-500 animate-pulse" />
+            <IconHeart className="w-4 h-4 text-accent animate-pulse" />
             <span>by</span>
-            <span className="text-gray-600 dark:text-gray-400 font-medium">
-              Abhishek Singh
-            </span>
+            <span className="text-foreground font-medium">Abhishek Singh</span>
           </div>
         </div>
 
         {/* Decorative Elements */}
-        <div className="relative h-1 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-neutral-900">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-green-400 animate-gradient"></div>
+        <div className="relative h-1 w-full overflow-hidden rounded-full bg-secondary">
+          <div className="absolute inset-0 accent-gradient animate-gradient"></div>
         </div>
       </div>
     </footer>

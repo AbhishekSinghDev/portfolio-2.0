@@ -1,24 +1,25 @@
-import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+} from "@tabler/icons-react";
 
 // ==================== SOCIAL LINKS ====================
 export const SOCIAL_LINKS = [
   {
     link: "https://www.linkedin.com/in/abhishek-singh-dev",
     label: "LinkedIn",
-    icon: SiLinkedin,
-    color: "hover:text-blue-500",
+    icon: IconBrandLinkedin,
   },
   {
     link: "https://github.com/AbhishekSinghDev",
     label: "GitHub",
-    icon: SiGithub,
-    color: "hover:text-purple-400",
+    icon: IconBrandGithub,
   },
   {
     link: "https://x.com/AbhishekOG_Dev",
     label: "X",
-    icon: SiX,
-    color: "hover:text-gray-300",
+    icon: IconBrandX,
   },
 ];
 

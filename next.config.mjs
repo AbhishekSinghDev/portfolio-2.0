@@ -15,7 +15,7 @@ const nextConfig = {
   },
   // Experimental optimizations
   experimental: {
-    optimizePackageImports: ["react-icons", "framer-motion", "lucide-react"],
+    optimizePackageImports: ["@tabler/icons-react", "framer-motion"],
   },
   // Compiler optimizations
   compiler: {

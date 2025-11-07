@@ -1,11 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { IconExternalLink, IconSparkles } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { HiExternalLink, HiSparkles } from "react-icons/hi";
-import { PERSONAL_PROJECTS } from "../constants";
+import { PERSONAL_PROJECTS } from "../constants/projects";
 import Title from "./Title";
 
 const PersonalProjects = () => {
@@ -39,14 +39,14 @@ const PersonalProjects = () => {
                 className={cn(
                   "relative h-full border rounded-2xl overflow-hidden backdrop-blur transition-all duration-300 hover:shadow-2xl flex flex-col",
                   isHighlighted
-                    ? "border-amber-300/60 dark:border-yellow-600/50 bg-gradient-to-br from-amber-50/60 via-white/50 to-yellow-50/50 dark:from-amber-950/20 dark:via-neutral-900/50 dark:to-yellow-950/20 hover:border-amber-400/70 dark:hover:border-yellow-500/60 shadow-lg shadow-amber-400/20 dark:shadow-yellow-500/20"
-                    : "border-gray-300 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 hover:border-gray-400 dark:hover:border-neutral-700"
+                    ? "border-accent bg-accent/5 hover:border-accent shadow-lg shadow-accent/10"
+                    : "border-border bg-card hover:border-accent"
                 )}
               >
                 {/* Featured Badge */}
                 {isHighlighted && (
-                  <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg">
-                    <HiSparkles className="w-3.5 h-3.5 text-white animate-pulse" />
+                  <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 bg-accent rounded-full shadow-lg">
+                    <IconSparkles className="w-3.5 h-3.5 text-white animate-pulse" />
                     <span className="text-xs font-bold text-white">
                       Featured Project
                     </span>
@@ -66,14 +66,9 @@ const PersonalProjects = () => {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div
-                    className={cn(
-                      "absolute inset-0 bg-gradient-to-br opacity-5 group-hover:opacity-10 transition-opacity duration-300",
-                      `bg-gradient-to-br ${project.gradient}`
-                    )}
-                  ></div>
+                  <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   <div className="absolute top-3 right-3 p-2 bg-black/50 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <HiExternalLink className="w-4 h-4 text-white" />
+                    <IconExternalLink className="w-4 h-4 text-white" />
                   </div>
                 </div>
 
@@ -97,13 +92,13 @@ const PersonalProjects = () => {
                         className={cn(
                           "text-lg font-bold transition-colors",
                           isHighlighted
-                            ? "text-amber-600 dark:text-amber-500 group-hover:text-yellow-600 dark:group-hover:text-yellow-500"
-                            : "text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400"
+                            ? "text-accent group-hover:text-accent"
+                            : "text-foreground group-hover:text-accent"
                         )}
                       >
                         {project.title}
                       </h3>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
+                      <p className="text-xs text-muted-foreground">
                         {project.subtitle}
                       </p>
                     </div>
@@ -116,8 +111,8 @@ const PersonalProjects = () => {
                           className={cn(
                             "px-2 py-0.5 text-xs font-medium rounded-full border",
                             isHighlighted
-                              ? "bg-amber-50 dark:bg-yellow-950/40 text-amber-700 dark:text-amber-400 border-amber-300 dark:border-yellow-700/40"
-                              : "bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-neutral-700"
+                              ? "bg-accent/10 text-accent border-accent/20"
+                              : "bg-secondary text-muted-foreground border-border"
                           )}
                         >
                           {tag}
@@ -126,7 +121,7 @@ const PersonalProjects = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed flex-1">
+                    <p className="text-muted-foreground text-xs leading-relaxed flex-1">
                       {project.description}
                     </p>
 
@@ -149,8 +144,8 @@ const PersonalProjects = () => {
                                   className={cn(
                                     "p-1.5 border rounded-md transition-all duration-300",
                                     isHighlighted
-                                      ? "bg-white/50 dark:bg-black/60 border-amber-200 dark:border-yellow-900/40 hover:border-amber-400 dark:hover:border-yellow-600"
-                                      : "bg-gray-100 dark:bg-black/40 border-gray-300 dark:border-neutral-800 hover:border-gray-400 dark:hover:border-neutral-600"
+                                      ? "bg-card border-accent/20 hover:border-accent"
+                                      : "bg-secondary border-border hover:border-accent"
                                   )}
                                 >
                                   {isImageIcon ? (
@@ -163,7 +158,7 @@ const PersonalProjects = () => {
                                       />
                                     </div>
                                   ) : (
-                                    <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400 group-hover/tech:text-gray-900 dark:group-hover/tech:text-white transition-colors" />
+                                    <Icon className="w-4 h-4 text-muted-foreground group-hover/tech:text-foreground transition-colors" />
                                   )}
                                 </div>
                               </div>
@@ -174,8 +169,8 @@ const PersonalProjects = () => {
                             className={cn(
                               "p-1.5 border rounded-md text-xs flex items-center px-2",
                               isHighlighted
-                                ? "bg-white/50 dark:bg-black/60 border-amber-200 dark:border-yellow-900/40 text-gray-600 dark:text-gray-400"
-                                : "bg-gray-100 dark:bg-black/40 border-gray-300 dark:border-neutral-800 text-gray-600 dark:text-gray-400"
+                                ? "bg-card border-accent/20 text-muted-foreground"
+                                : "bg-secondary border-border text-muted-foreground"
                             )}
                           >
                             +{project.tech.length - (isHighlighted ? 8 : 6)}
@@ -188,19 +183,19 @@ const PersonalProjects = () => {
                   {/* Stats Section (Only for highlighted projects) */}
                   {isHighlighted && project.stats && (
                     <div className="md:flex-1 space-y-2">
-                      <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                      <h4 className="text-xs font-semibold text-foreground mb-3">
                         🚀 Statistics
                       </h4>
                       <div className="grid grid-cols-3 md:grid-cols-1 gap-2">
                         {project.stats.map((stat, statIndex) => (
                           <div
                             key={statIndex}
-                            className="p-3 rounded-lg bg-gradient-to-br from-amber-50/70 to-yellow-50/50 dark:from-amber-950/30 dark:to-yellow-950/20 border border-amber-300/40 dark:border-yellow-700/30 backdrop-blur-sm"
+                            className="p-3 rounded-lg bg-accent/5 border border-accent/20 backdrop-blur-sm"
                           >
-                            <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
+                            <div className="text-xl md:text-2xl font-bold text-accent">
                               {stat.value}
                             </div>
-                            <div className="text-[10px] md:text-xs text-gray-600 dark:text-gray-400 mt-0.5">
+                            <div className="text-[10px] md:text-xs text-muted-foreground mt-0.5">
                               {stat.label}
                             </div>
                           </div>
@@ -210,14 +205,14 @@ const PersonalProjects = () => {
                   )}
                 </div>
 
-                {/* Gradient Border Effect */}
+                {/* Border Effect */}
                 <div
                   className={cn(
                     "absolute inset-0 rounded-2xl transition-opacity duration-500 pointer-events-none",
-                    `bg-gradient-to-br ${project.gradient}`,
+                    "bg-accent",
                     isHighlighted
                       ? "opacity-5 group-hover:opacity-10"
-                      : "opacity-0 group-hover:opacity-10"
+                      : "opacity-0 group-hover:opacity-5"
                   )}
                 ></div>
               </div>
