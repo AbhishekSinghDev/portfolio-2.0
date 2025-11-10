@@ -1,6 +1,7 @@
 import { LenisScroll } from "@/components/lenis-scroll";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -54,6 +55,7 @@ export default function RootLayout({
         >
           {children}
           <LenisScroll />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
