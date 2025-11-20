@@ -13,6 +13,7 @@ import {
   IconDatabase,
   IconLock,
   IconShield,
+  IconTerminal,
 } from "@tabler/icons-react";
 
 // ==================== FREELANCE PROJECTS ====================
@@ -86,6 +87,27 @@ export const PERSONAL_PROJECTS = [
       { label: "Total Requests", value: "2M+" },
     ],
   },
+  {
+    title: "CERO",
+    subtitle: "AI-Powered CLI Tool for Developers",
+    description:
+      "Modern, production-ready command-line interface that brings conversational AI directly to your terminal with enterprise-grade architecture. Features real-time LLM streaming, autonomous agentic behavior with internet search and code execution, and seamless device code OAuth authentication. Built on a serverless streaming architecture using Server-Sent Events (SSE) and Inngest Realtime pub/sub for zero-polling, low-latency responses. The CLI communicates with a Next.js API backend deployed on Vercel, leveraging Vercel AI SDK for multi-provider LLM support and Better Auth for secure session management. Includes persistent conversation history, token refresh mechanisms, and cross-platform credential storage using OS-native keychains (macOS Keychain, Windows Credential Manager, Linux Secret Service). Comprehensive documentation site coming soon with architecture deep-dives, API references, and deployment guides.",
+    tech: [
+      { icon: IconBrandNextjs, name: "Next.js" },
+      { icon: IconBrandTypescript, name: "TypeScript" },
+      { icon: IconBrandNodejs, name: "Node.js" },
+      { icon: "/inngest.png", name: "Inngest", type: "image" },
+      { icon: IconCloud, name: "Vercel AI SDK" },
+      { icon: IconTerminal, name: "CLI (Commander)" },
+      { icon: IconLock, name: "Better Auth" },
+      { icon: IconDatabase, name: "PostgreSQL" },
+      { icon: IconBrandVercel, name: "Vercel" },
+    ],
+    link: "https://cero.abhisheksingh.me",
+    cover: "/project-images/cero.png",
+    tags: ["AI", "CLI Tool", "Developer Tools", "LLM"],
+  },
+
   {
     title: "Lunox.ai",
     subtitle: "Web Search + LLM Summarization",
