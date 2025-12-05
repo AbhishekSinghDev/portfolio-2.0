@@ -82,16 +82,17 @@ export const PERSONAL_PROJECTS = [
     tags: ["Education", "Computer Science", "Full Stack", "Next.js"],
     highlighted: true,
     stats: [
-      { label: "Daily Visitors", value: "200+" },
-      { label: "Lifetime Visitors", value: "50K+" },
-      { label: "Total Requests", value: "2M+" },
+      { label: "Daily Visitors", value: "1000+" },
+      { label: "Lifetime Visitors", value: "100K+" },
+      { label: "Page Views", value: "1M+" },
+      { label: "Total Requests", value: "5M+" },
     ],
   },
   {
     title: "CeroCode",
     subtitle: "AI-Powered CLI Tool for Developers",
     description:
-      "Modern, production-ready command-line interface that brings conversational AI directly to your terminal with enterprise-grade architecture. Features real-time LLM streaming, autonomous agentic behavior with internet search and code execution, and seamless device code OAuth authentication. Built on a serverless streaming architecture using Server-Sent Events (SSE) and Inngest Realtime pub/sub for zero-polling, low-latency responses. The CLI communicates with a Next.js API backend deployed on Vercel, leveraging Vercel AI SDK for multi-provider LLM support and Better Auth for secure session management. Includes persistent conversation history, token refresh mechanisms, and cross-platform credential storage using OS-native keychains (macOS Keychain, Windows Credential Manager, Linux Secret Service). Comprehensive documentation site coming soon with architecture deep-dives, API references, and deployment guides.",
+      "Modern, production-ready command-line interface that brings conversational AI directly to your terminal with enterprise-grade architecture. Features real-time LLM streaming, autonomous agentic behavior with internet search and code execution, and seamless device code OAuth authentication. Built on a serverless streaming architecture using Server-Sent Events (SSE) and Inngest Realtime pub/sub for zero-polling, low-latency responses. The CLI communicates with a Next.js API backend deployed on Vercel, leveraging Vercel AI SDK for multi-provider LLM support and Better Auth for secure session management. Includes persistent conversation history, token refresh mechanisms, and cross-platform credential storage using OS-native keychains (macOS Keychain, Windows Credential Manager, Linux Secret Service).",
     tech: [
       { icon: IconBrandNextjs, name: "Next.js" },
       { icon: IconBrandTypescript, name: "TypeScript" },
