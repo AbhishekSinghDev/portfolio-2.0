@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
   location: "Delhi, India",
   availability: "Available for opportunities",
   resumeLink:
-    "https://drive.google.com/file/d/1LwYqMQMLxSLXODb-kfsH_v--xKMlzK5K/view?usp=sharing",
+    "https://drive.google.com/file/d/1kggeTW-oNi1tuNnXc-nWLojFIWajoH_n/view?usp=sharing",
   description:
     "Building scalable web & mobile applications with passion and precision. Specialized in AI-powered solutions.",
   currentCompany: "SK Aggarwal & Co",
