@@ -1,11 +1,3 @@
-import {
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandTypescript,
-  IconCode,
-  IconSparkles,
-} from "@tabler/icons-react";
-
 // ==================== PERSONAL INFO ====================
 export const PERSONAL_INFO = {
   name: "Abhishek Singh",
@@ -36,19 +28,4 @@ export const HERO_STATS = [
   { value: "1+", label: "Years Experience" },
   { value: "15+", label: "Projects Built" },
   { value: "2", label: "Companies Served" },
-];
-
-export const FLOATING_ICONS = [
-  { Icon: IconBrandTypescript, delay: "0s" },
-  { Icon: IconBrandReact, delay: "0.5s" },
-  { Icon: IconBrandNextjs, delay: "1s" },
-  { Icon: IconCode, delay: "1.5s" },
-  { Icon: IconSparkles, delay: "2s" },
-];
-
-export const CODE_CARD_DATA = [
-  { key: "name", value: '"Abhishek"' },
-  { key: "role", value: '"Full Stack"' },
-  { key: "focus", value: '"AI & Web"' },
-  { key: "passion", value: '"Building"' },
 ];

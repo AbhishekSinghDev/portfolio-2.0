@@ -18,15 +18,16 @@ import {
   IconDatabase,
   IconLock,
   IconShield,
+  IconTrain,
 } from "@tabler/icons-react";
 
 // ==================== CORE SKILLS ====================
 export const CORE_SKILLS = [
   {
-    text: "Node.js",
-    icon: IconBrandNodejs,
+    text: "GoLang",
+    icon: IconBrandGolang,
     isLearning: false,
-    description: "Backend Runtime",
+    description: "Systems Language",
   },
   {
     text: "TypeScript",
@@ -41,10 +42,34 @@ export const CORE_SKILLS = [
     description: "Core Language",
   },
   {
+    text: "Node.js",
+    icon: IconBrandNodejs,
+    isLearning: false,
+    description: "Backend Runtime",
+  },
+  {
+    text: "PostgreSQL",
+    icon: IconDatabase,
+    isLearning: false,
+    description: "SQL Database",
+  },
+  {
+    text: "Docker",
+    icon: IconBrandDocker,
+    isLearning: false,
+    description: "Containerization",
+  },
+  {
     text: "React",
     icon: IconBrandReact,
     isLearning: false,
     description: "UI Library",
+  },
+  {
+    text: "Next.js",
+    icon: IconBrandNextjs,
+    isLearning: false,
+    description: "React Framework",
   },
   {
     text: "React Native",
@@ -59,12 +84,6 @@ export const CORE_SKILLS = [
     description: "React Native Platform",
   },
   {
-    text: "Next.js",
-    icon: IconBrandNextjs,
-    isLearning: false,
-    description: "React Framework",
-  },
-  {
     text: "Express",
     icon: IconBrandNodejs,
     isLearning: false,
@@ -75,24 +94,6 @@ export const CORE_SKILLS = [
     icon: IconApi,
     isLearning: false,
     description: "Type-safe APIs",
-  },
-  {
-    text: "PostgreSQL",
-    icon: IconDatabase,
-    isLearning: false,
-    description: "SQL Database",
-  },
-  {
-    text: "GoLang",
-    icon: IconBrandGolang,
-    isLearning: true,
-    description: "Systems Language",
-  },
-  {
-    text: "Docker",
-    icon: IconBrandDocker,
-    isLearning: true,
-    description: "Containerization",
   },
 ];
 
@@ -139,6 +140,7 @@ export const LIBRARIES_CATEGORIES = [
     title: "DevOps & Infrastructure",
     skills: [
       { text: "Git/GitHub", icon: IconBrandGithub, type: "icon" },
+      { text: "Railway", icon: IconTrain, type: "icon" },
       { text: "Turborepo", icon: IconCloud, type: "icon" },
       { text: "Vercel", icon: IconBrandVercel, type: "icon" },
       { text: "AWS", icon: IconBrandAws, type: "icon" },

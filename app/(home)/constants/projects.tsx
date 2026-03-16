@@ -1,6 +1,7 @@
 import {
   IconBrandAws,
   IconBrandGoogle,
+  IconBrandGoogleAnalytics,
   IconBrandJavascript,
   IconBrandNextjs,
   IconBrandNodejs,
@@ -12,8 +13,10 @@ import {
   IconCloud,
   IconDatabase,
   IconLock,
+  IconPlugConnected,
   IconShield,
   IconTerminal,
+  IconTrain,
 } from "@tabler/icons-react";
 
 // ==================== FREELANCE PROJECTS ====================
@@ -69,23 +72,23 @@ export const PERSONAL_PROJECTS = [
       { icon: IconBrandNextjs, name: "Next.js" },
       { icon: IconBrandReact, name: "React" },
       { icon: IconBrandTypescript, name: "TypeScript" },
-      { icon: IconBrandTailwind, name: "Tailwind CSS" },
-      { icon: IconDatabase, name: "Drizzle ORM" },
+      { icon: IconPlugConnected, name: "Drizzle ORM" },
       { icon: IconDatabase, name: "PostgreSQL" },
-      { icon: IconBrandVercel, name: "Vercel" },
+      { icon: IconTrain, name: "Railway" },
       { icon: IconBrandGoogle, name: "Google Adsense" },
+      { icon: IconBrandGoogleAnalytics, name: "PostHog" },
       { icon: IconBrandAws, name: "AWS S3" },
       { icon: IconCloud, name: "Upstash Redis" },
+      { icon: IconBrandTailwind, name: "Tailwind CSS" },
     ],
     link: "https://youth-af.com",
     cover: "project-images/youth-af.png",
     tags: ["Education", "Computer Science", "Full Stack", "Next.js"],
     highlighted: true,
     stats: [
-      { label: "Daily Visitors", value: "1000+" },
+      { label: "Daily Active Users", value: "500 - 13000+" },
       { label: "Lifetime Visitors", value: "100K+" },
-      { label: "Page Views", value: "1M+" },
-      { label: "Total Requests", value: "5M+" },
+      { label: "Total Page Views", value: "1 Million+" },
     ],
   },
   {
