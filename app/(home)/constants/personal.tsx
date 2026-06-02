@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   resumeLink:
     "https://drive.google.com/file/d/1j2NUnefLendo7pSPCCnCfMzTLRtHbdbP/view?usp=sharing",
   description:
-    "Full stack engineer building scalable web and mobile products with TypeScript, Node.js, and Next.js, with a focus on AI-driven systems.",
+    "Full Stack Engineer with 2+ years building production systems in TypeScript and Node.js. Experienced in designing multi-tenant SaaS backends, AI-integrated data pipelines, real-time systems, and monorepo architectures. Shipped systems handling 1000+ daily active users, 1M+ page views, and verified revenue generation.",
   currentCompany: "SK Aggarwal & Co",
 };
 
