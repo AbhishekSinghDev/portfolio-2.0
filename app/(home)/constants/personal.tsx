@@ -7,9 +7,9 @@ export const PERSONAL_INFO = {
   location: "Delhi, India",
   availability: "Available for opportunities",
   resumeLink:
-    "https://drive.google.com/file/d/1kggeTW-oNi1tuNnXc-nWLojFIWajoH_n/view?usp=sharing",
+    "https://drive.google.com/file/d/1j2NUnefLendo7pSPCCnCfMzTLRtHbdbP/view?usp=sharing",
   description:
-    "Building scalable web & mobile applications with passion and precision. Specialized in AI-powered solutions.",
+    "Full stack engineer building scalable web and mobile products with TypeScript, Node.js, and Next.js, with a focus on AI-driven systems.",
   currentCompany: "SK Aggarwal & Co",
 };
 
@@ -18,14 +18,14 @@ export const HERO_DESCRIPTION = {
   text: "Crafting scalable web & mobile applications at",
   company: "SK Aggarwal & Co",
   specializations: [
-    "AI-powered systems",
-    "monorepo architecture",
-    "building products that make a difference",
+    "AI-powered pipelines",
+    "event-driven workflows",
+    "payments and integrations",
   ],
 };
 
 export const HERO_STATS = [
-  { value: "1+", label: "Years Experience" },
+  { value: "2+", label: "Years Experience" },
   { value: "15+", label: "Projects Built" },
   { value: "2", label: "Companies Served" },
 ];

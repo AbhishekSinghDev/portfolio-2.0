@@ -4,6 +4,7 @@ import { IconMail } from "@tabler/icons-react";
 import Link from "next/link";
 import { PERSONAL_INFO } from "../constants/personal";
 import { SOCIAL_LINKS } from "../constants/social";
+import packageInfo from "../../../package.json";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,9 +52,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 pt-6 border-t border-border">
+        <div className="mt-8 pt-6 border-t border-border flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">
             {currentYear} {PERSONAL_INFO.name}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Version v{packageInfo.version}
           </p>
         </div>
       </div>
