@@ -1,8 +1,5 @@
 "use client";
 
-import { IconArrowUpRight } from "@tabler/icons-react";
-import Link from "next/link";
-import { PERSONAL_INFO } from "../constants/personal";
 import { WORK_EXPERIENCES } from "../constants/work";
 import Title from "./Title";
 
@@ -25,10 +22,7 @@ const WorkExperience = () => {
                 </h3>
                 <p className="text-sm text-muted-foreground">{exp.company}</p>
               </div>
-              <div className="flex flex-col sm:items-end gap-0.5 shrink-0">
-                <span className="text-sm text-muted-foreground">
-                  {exp.period}
-                </span>
+              <div className="shrink-0">
                 <span className="text-xs text-muted-foreground">
                   {exp.location}
                 </span>
@@ -63,19 +57,6 @@ const WorkExperience = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Resume Link */}
-      <div className="mt-6 flex justify-center">
-        <Link
-          href={PERSONAL_INFO.resumeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <IconArrowUpRight className="w-4 h-4" />
-          <span>View Full Resume</span>
-        </Link>
       </div>
     </div>
   );

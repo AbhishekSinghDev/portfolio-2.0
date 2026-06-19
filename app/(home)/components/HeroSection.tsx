@@ -1,6 +1,6 @@
 "use client";
 
-import { IconArrowUpRight, IconMail, IconMapPin } from "@tabler/icons-react";
+import { IconMail, IconMapPin } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -83,15 +83,6 @@ const HeroSection = () => {
               >
                 <IconMail className="w-3.5 h-3.5" />
                 <span>Get in Touch</span>
-              </Link>
-
-              <Link
-                href={PERSONAL_INFO.resumeLink}
-                target="_blank"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md border border-border text-foreground text-xs font-medium transition-colors hover:bg-secondary"
-              >
-                <IconArrowUpRight className="w-3.5 h-3.5" />
-                <span>Resume</span>
               </Link>
             </div>
           </div>

@@ -3,7 +3,6 @@ export const WORK_EXPERIENCES = [
   {
     company: "SK Aggarwal and Co",
     role: "Full Stack Engineer",
-    period: "September 2025 - Present",
     location: "Haryana, India",
     project: "Earnex Rewards - Loyalty Rewards Platform",
     highlights: [
@@ -30,7 +29,6 @@ export const WORK_EXPERIENCES = [
   {
     company: "Nextfly Technologies Pvt. Ltd.",
     role: "Full Stack Developer",
-    period: "August 2024 - August 2025",
     location: "Haryana, India",
     project: "Scraplo & MyDeer",
     highlights: [
