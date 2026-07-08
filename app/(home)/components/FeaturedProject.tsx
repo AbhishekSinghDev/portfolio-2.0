@@ -32,20 +32,20 @@ const FEATURED_PROJECT = {
   stats: [
     {
       icon: IconUsers,
-      value: "50K+",
-      label: "Total Visitors",
+      value: "200K+",
+      label: "Lifetime Visitors",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: IconChartBar,
-      value: "1.5M+",
-      label: "Total Requests",
+      value: "1M+",
+      label: "Total Page Views",
       gradient: "from-purple-500 to-pink-500",
     },
     {
       icon: IconActivity,
-      value: "200+",
-      label: "Daily Active Users",
+      value: "1,000+",
+      label: "Daily Visitors",
       gradient: "from-green-500 to-emerald-500",
     },
   ],
@@ -70,11 +70,11 @@ const FEATURED_PROJECT = {
     { icon: IconCloud, name: "Upstash Redis", color: "text-green-400" },
   ],
   highlights: [
-    "🎯 Serving 50K+ students with quality CS education",
-    "🚀 Scaled to handle 1.5M+ requests with optimized caching",
-    "📈 Growing community with 200+ daily active learners",
-    "💰 Monetized through Google Adsense integration",
-    "⚡ Lightning-fast performance with Redis caching",
+    "🎯 Serving 200K+ visitors with quality CS education",
+    "🚀 Scaled to handle 1M+ page views with optimized caching",
+    "📈 Growing community with 1,000+ daily active visitors",
+    "💰 Monetized through Razorpay course purchases and Google Adsense",
+    "⚡ Lightning-fast performance with SSG/ISR and Redis caching",
   ],
 };
 

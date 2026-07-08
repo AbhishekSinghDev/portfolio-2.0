@@ -18,12 +18,12 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-foreground">
               {PERSONAL_INFO.name}
             </h3>
-            <p className="text-sm text-muted-foreground max-w-sm">
+            <p className="text-xs text-muted-foreground max-w-sm">
               {PERSONAL_INFO.description}
             </p>
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               <IconMail className="w-4 h-4" />
               <span>{PERSONAL_INFO.email}</span>

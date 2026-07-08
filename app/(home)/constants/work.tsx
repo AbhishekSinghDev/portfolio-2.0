@@ -1,7 +1,7 @@
 // ==================== WORK EXPERIENCE ====================
 export const WORK_EXPERIENCES = [
   {
-    company: "SK Aggarwal and Co",
+    company: "SK Agarwal and Co Pvt. Ltd.",
     role: "Full Stack Engineer",
     location: "Haryana, India",
     project: "Earnex Rewards - Loyalty Rewards Platform",

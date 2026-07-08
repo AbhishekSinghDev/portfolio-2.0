@@ -44,10 +44,16 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
-            {HERO_DESCRIPTION.text}{" "}
-            <span className="text-foreground font-medium">
-              {HERO_DESCRIPTION.company}
-            </span>
+            {HERO_DESCRIPTION.text}
+            {HERO_DESCRIPTION.company && (
+              <>
+                {" "}
+                <span className="text-foreground font-medium">
+                  {HERO_DESCRIPTION.company}
+                </span>
+                .
+              </>
+            )}
             . Specialized in{" "}
             <span className="text-foreground font-medium">
               {HERO_DESCRIPTION.specializations[0]}
