@@ -1,37 +1,55 @@
 import { LenisScroll } from "@/components/lenis-scroll";
-import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next";
-import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Anybody, Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const display = Anybody({
   subsets: ["latin"],
   display: "swap",
   preload: true,
-  variable: "--font-space-grotesk",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+  weight: "variable",
+  axes: ["wdth"],
+});
+
+const body = Atkinson_Hyperlegible({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-body",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abhisheksingh.me/"),
-  title: "Abhishek Singh",
+  title: "Abhishek Singh — Full Stack Engineer",
   authors: {
-    name: "abhishek singh",
+    name: "Abhishek Singh",
   },
   description:
-    "Based in Delhi, I'm a Fullstack developer passionate about building a modern web application that users love.",
+    "Full Stack Engineer in Delhi building multi-tenant platforms, AI pipelines, real-time systems, and products that scale.",
   openGraph: {
-    title: "Abhishek Singh",
+    title: "Abhishek Singh — Full Stack Engineer",
     description:
-      "Based in Delhi, I'm a Fullstack developer passionate about building a modern web application that users love.",
+      "Production systems, AI-integrated products, and full-stack engineering from first commit to real-world scale.",
     url: "https://abhisheksingh.me/",
     siteName: "Abhishek Singh",
     images: "/me.png",
     type: "website",
   },
-  keywords: ["full stack developer", "abhishek singh"],
+  keywords: [
+    "full stack engineer",
+    "TypeScript developer",
+    "Next.js developer",
+    "Node.js developer",
+    "Abhishek Singh",
+  ],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ece8ff",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -43,20 +61,12 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("dark scroll-smooth", spaceGrotesk.variable)}
+      className={`${display.variable} ${body.variable}`}
     >
-      <body className={cn(spaceGrotesk.className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-          forcedTheme="dark"
-        >
-          {children}
-          <LenisScroll />
-          <Analytics />
-        </ThemeProvider>
+      <body>
+        {children}
+        <LenisScroll />
+        <Analytics />
       </body>
     </html>
   );
