@@ -6,12 +6,10 @@ export const WORK_EXPERIENCES = [
     location: "Haryana, India",
     project: "Earnex Rewards - Loyalty Rewards Platform",
     highlights: [
-      "Architected Earnex Rewards as a multi-tenant loyalty and analytics platform spanning 5 apps with shared packages for DB schemas, business logic, Zod validation, and email templates",
-      "Engineered a 6-stage AI receipt verification pipeline with LLM OCR, authenticity checks, EXIF validation, arithmetic correctness, perceptual-hash dedupe, and automated decisioning",
-      "Designed fraud and trust scoring using 5 signals across 4 risk tiers and 11 flag types with resolution workflows and full admin audit trails",
-      "Implemented Shopify OAuth, webhook registration, and BullMQ-backed async sync for orders, customers, products, and line items",
-      "Built a coin wallet and rewards ledger with 4-stage offer and coupon lifecycle, milestone tracking, and redemption analytics",
-      "Activated lifecycle marketing with RFM segmentation across 6 behavioral segments, basket affinity analysis, churn indicators, and spend split insights",
+      "Built the core architecture for Earnex Rewards, a multi-tenant loyalty platform designed to onboard multiple brand partners onto a shared codebase, structured as 5 apps (API server, admin dashboard, brand portal, marketing site, mobile app) inside a single Turborepo monorepo sharing one schema and validation layer, with a role-segregated data model (separate schemas for customer, brand, and admin personas) keeping auth and permission logic isolated per role",
+      "Built a 6-stage automated receipt verification pipeline (LLM OCR, image authenticity checks, EXIF metadata validation, duplicate detection, automated decisioning) to replace manual review, with each stage run as a tracked, independently auditable background job",
+      "Designed a fraud and trust scoring system combining submission velocity, account age, and merchant diversity into a composite risk score across 3 tiers, with admin-facing resolution workflows and a full audit trail for every flagged submission",
+      "Integrated Shopify OAuth and webhook-driven sync, with BullMQ background jobs handling initial and delta sync of orders, customers, products, and line items, giving brand teams a live view of e-commerce history inside the platform",
     ],
     tech: [
       "Turborepo",
@@ -32,11 +30,9 @@ export const WORK_EXPERIENCES = [
     location: "Haryana, India",
     project: "Scraplo & MyDeer",
     highlights: [
-      "Built Scraplo end-to-end as a logistics marketplace across 5 roles with RBAC and full flow from pickup scheduling to weighing and payout",
-      "Implemented geolocation-based order assignment within a 5 km radius with real-time pickup tracking",
-      "Integrated Google Maps coordinate polling, route rendering, and live ETA updates for customers",
-      "Built a Razorpay-backed digital wallet covering earnings, withdrawals, reconciliation, and transaction history",
-      "Automated payouts tied to order completion with audit-ready records",
+      "Built Scraplo, a scrap-collection logistics marketplace supporting 5 distinct user types, each with its own schema (customer, driver, admin, and others), keeping auth, permissions, and business logic cleanly isolated per persona across the pickup flow: scheduling, auto-assignment, weighing, and payout",
+      "Built a geolocation-based driver-assignment algorithm using the Haversine formula to match available drivers within a 5 km radius, with live pickup tracking via Google Maps polling for route and ETA visibility",
+      "Built a Razorpay-backed digital wallet for delivery personnel covering earnings, withdrawals, reconciliation, and transaction history",
     ],
     tech: [
       "Next.js",

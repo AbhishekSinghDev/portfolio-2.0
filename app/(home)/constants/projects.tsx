@@ -113,27 +113,26 @@ export const PERSONAL_PROJECTS = [
     cover: "/project-images/cero.png",
     tags: ["AI", "CLI Tool", "Developer Tools", "LLM"],
   },
-
-  {
-    title: "Lunox.ai",
-    subtitle: "Web Search + LLM Summarization",
-    description:
-      "AI-powered search engine that combines web search results with LLM summarization using Google Gemini and Brave Search API.",
-    tech: [
-      { icon: IconBrandNextjs, name: "Next.js" },
-      { icon: IconBrandReact, name: "React" },
-      { icon: IconBrandTypescript, name: "TypeScript" },
-      { icon: IconBrandTailwind, name: "Tailwind" },
-      { icon: "/inngest.png", name: "Inngest", type: "image" },
-      { icon: IconCloud, name: "Gemini AI" },
-      { icon: IconCloud, name: "Brave Search" },
-      { icon: IconDatabase, name: "Drizzle ORM" },
-      { icon: IconDatabase, name: "PostgreSQL" },
-    ],
-    link: "https://lunox.heyabhishek.in",
-    cover: "/project-images/lunox.png",
-    tags: ["AI", "Search Engine", "Full Stack"],
-  },
+  //   {
+  //     title: "Lunox.ai",
+  //     subtitle: "Web Search + LLM Summarization",
+  //     description:
+  //       "AI-powered search engine that combines web search results with LLM summarization using Google Gemini and Brave Search API.",
+  //     tech: [
+  //       { icon: IconBrandNextjs, name: "Next.js" },
+  //       { icon: IconBrandReact, name: "React" },
+  //       { icon: IconBrandTypescript, name: "TypeScript" },
+  //       { icon: IconBrandTailwind, name: "Tailwind" },
+  //       { icon: "/inngest.png", name: "Inngest", type: "image" },
+  //       { icon: IconCloud, name: "Gemini AI" },
+  //       { icon: IconCloud, name: "Brave Search" },
+  //       { icon: IconDatabase, name: "Drizzle ORM" },
+  //       { icon: IconDatabase, name: "PostgreSQL" },
+  //     ],
+  //     link: "https://lunox.heyabhishek.in",
+  //     cover: "/project-images/lunox.png",
+  //     tags: ["AI", "Search Engine", "Full Stack"],
+  //   },
   {
     title: "Pencil.io",
     subtitle: "Documents & Diagrams",

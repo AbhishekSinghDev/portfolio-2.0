@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abhisheksingh.me/"),
+  metadataBase: new URL("https://heyabhishek.in"),
   title: "Abhishek Singh",
   authors: {
     name: "abhishek singh",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Abhishek Singh",
     description:
       "Based in Delhi, I'm a Fullstack developer passionate about building a modern web application that users love.",
-    url: "https://abhisheksingh.me/",
+    url: "https://heyabhishek.in",
     siteName: "Abhishek Singh",
     images: "/me.png",
     type: "website",

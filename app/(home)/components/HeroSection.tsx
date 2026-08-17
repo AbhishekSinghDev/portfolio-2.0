@@ -1,6 +1,6 @@
 "use client";
 
-import { IconMail, IconMapPin } from "@tabler/icons-react";
+import { IconLink, IconMail, IconMapPin } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -83,6 +83,15 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex gap-2">
+              <Link
+                href="https://drive.google.com/file/d/1kYBY3-0RtbzjOL4J1Sj04eYa1Q_QpBlV/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-foreground text-background text-xs font-medium transition-opacity hover:opacity-90"
+              >
+                <IconLink className="w-3.5 h-3.5" />
+                <span>Resume</span>
+              </Link>
               <Link
                 href={`mailto:${PERSONAL_INFO.email}`}
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-foreground text-background text-xs font-medium transition-opacity hover:opacity-90"

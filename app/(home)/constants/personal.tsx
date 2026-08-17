@@ -10,7 +10,6 @@ export const PERSONAL_INFO = {
     "https://drive.google.com/file/d/1j2NUnefLendo7pSPCCnCfMzTLRtHbdbP/view?usp=sharing",
   description:
     "Full Stack Engineer building production systems in TypeScript and Node.js. Experienced in designing multi-tenant SaaS backends, AI-integrated data pipelines, real-time systems, and monorepo architectures. Built youth-af.com, a live platform handling 1000+ daily active users, 1M+ page views, and INR 50,000+ in revenue.",
-
 };
 
 // ==================== HERO SECTION ====================
@@ -25,6 +24,6 @@ export const HERO_DESCRIPTION = {
 };
 
 export const HERO_STATS = [
-  //   { value: "15+", label: "Projects Built" },
+  { value: "~2 Years", label: "Total Work Experience" },
   { value: "2", label: "Companies Served" },
 ];

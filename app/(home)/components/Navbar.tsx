@@ -12,6 +12,8 @@ import {
   IconX,
 } from "@tabler/icons-react";
 
+import { PERSONAL_INFO } from "../constants/personal";
+
 const Navbar = ({ className }: { className?: string }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -102,6 +104,15 @@ const Navbar = ({ className }: { className?: string }) => {
           );
         })}
 
+        <Link
+          href={PERSONAL_INFO.resumeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-1 hidden sm:inline-flex items-center px-3 py-1.5 rounded-md bg-foreground text-background text-xs font-medium transition-opacity hover:opacity-90"
+        >
+          Résumé
+        </Link>
+
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -134,6 +145,15 @@ const Navbar = ({ className }: { className?: string }) => {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href={PERSONAL_INFO.resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-3 py-2 rounded text-sm text-foreground font-medium hover:bg-secondary transition-colors"
+              >
+                Résumé
+              </Link>
             </div>
           </div>
         </div>
