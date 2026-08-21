@@ -4,14 +4,11 @@ import { MovingBorderBtn } from "@/components/ui/moving-border";
 import {
   IconActivity,
   IconBrandAws,
-  IconBrandGoogle,
   IconBrandNextjs,
   IconBrandReact,
   IconBrandTailwind,
   IconBrandTypescript,
-  IconBrandVercel,
   IconChartBar,
-  IconCloud,
   IconDatabase,
   IconExternalLink,
   IconSparkles,
@@ -24,28 +21,28 @@ import Link from "next/link";
 
 const FEATURED_PROJECT = {
   title: "Youth AF",
-  subtitle: "Computer Science Learning Platform",
+  subtitle: "Computer Science Learning Platform · Live Jan 2026",
   description:
-    "No fluff. No overcomplications. Just solid CS learning. Master programming, algorithms, data structures, and computer science fundamentals with practical, hands-on tutorials, notes, and resources for Classes 9-12.",
+    "Designed and built solo — frontend, backend, and infrastructure — with end-to-end type safety via Eden treaty contracts. Razorpay monetization with signature-verified webhooks and S3 delivery. Scaled to 148K+ visitors and 1.22M+ page views with 25+ min avg sessions, migrated to Railway on a private network for near-localhost DB latency.",
   link: "https://youth-af.com",
   cover: "/project-images/youth-af.png",
   stats: [
     {
       icon: IconUsers,
-      value: "200K+",
-      label: "Lifetime Visitors",
+      value: "148K+",
+      label: "Visitors",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: IconChartBar,
-      value: "1M+",
-      label: "Total Page Views",
+      value: "1.22M+",
+      label: "Page Views",
       gradient: "from-purple-500 to-pink-500",
     },
     {
       icon: IconActivity,
-      value: "1,000+",
-      label: "Daily Visitors",
+      value: "11,000+",
+      label: "Registered Users · INR 59K+ Revenue",
       gradient: "from-green-500 to-emerald-500",
     },
   ],
@@ -55,26 +52,25 @@ const FEATURED_PROJECT = {
       name: "Next.js",
       color: "text-gray-800 dark:text-white",
     },
-    { icon: IconBrandReact, name: "React", color: "text-cyan-500" },
+    { icon: IconBrandReact, name: "Elysia", color: "text-cyan-500" },
     { icon: IconBrandTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: IconBrandTailwind, name: "Tailwind", color: "text-cyan-400" },
+    { icon: IconBrandTailwind, name: "Bun", color: "text-orange-400" },
     { icon: IconDatabase, name: "Drizzle ORM", color: "text-green-500" },
     { icon: IconDatabase, name: "PostgreSQL", color: "text-blue-600" },
     {
-      icon: IconBrandVercel,
-      name: "Vercel",
-      color: "text-gray-800 dark:text-white",
+      icon: IconBrandAws,
+      name: "AWS S3",
+      color: "text-orange-500",
     },
-    { icon: IconBrandGoogle, name: "Google Adsense", color: "text-red-500" },
-    { icon: IconBrandAws, name: "AWS S3", color: "text-orange-500" },
-    { icon: IconCloud, name: "Upstash Redis", color: "text-green-400" },
+    { icon: IconDatabase, name: "Redis", color: "text-red-500" },
+    { icon: IconBrandTailwind, name: "Railway", color: "text-purple-500" },
   ],
   highlights: [
-    "🎯 Serving 200K+ visitors with quality CS education",
-    "🚀 Scaled to handle 1M+ page views with optimized caching",
-    "📈 Growing community with 1,000+ daily active visitors",
-    "💰 Monetized through Razorpay course purchases and Google Adsense",
-    "⚡ Lightning-fast performance with SSG/ISR and Redis caching",
+    "🎯 148K+ visitors, 1.22M+ page views, 231K+ sessions — 10% bounce, 25+ min avg",
+    "💰 1,360+ Razorpay purchases · INR 59,000+ revenue with S3-delivered content",
+    "⚡ SSG/ISR + TanStack Query SSR hydration; Railway private-network DB",
+    "🔒 Better Auth admin suite with API-layer permission enforcement",
+    "🔗 Eden treaty contracts — schema changes surface as compile-time errors",
   ],
 };
 
@@ -106,7 +102,7 @@ export default function FeaturedProject() {
             My Proudest Achievement
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A project that&apos;s making a real difference in education
+            Independently built and shipped — now serving 11,000+ users
           </p>
         </motion.div>
 

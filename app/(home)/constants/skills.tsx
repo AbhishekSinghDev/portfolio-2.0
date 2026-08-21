@@ -110,8 +110,9 @@ export const LIBRARIES_CATEGORIES = [
     skills: [
       { text: "REST APIs", icon: IconApi, type: "icon" },
       { text: "WebSockets", icon: IconBrandSocketIo, type: "icon" },
-      { text: "Server-Sent Events", icon: IconApi, type: "icon" },
       { text: "tRPC", icon: IconApi, type: "icon" },
+      { text: "Express.js", icon: IconBrandNodejs, type: "icon" },
+      { text: "Node.js", icon: IconBrandNodejs, type: "icon" },
     ],
   },
   {
@@ -152,17 +153,19 @@ export const LIBRARIES_CATEGORIES = [
       { text: "Docker", icon: IconBrandDocker, type: "icon" },
       { text: "Turborepo", icon: IconCloud, type: "icon" },
       { text: "Vercel", icon: IconBrandVercel, type: "icon" },
+      { text: "Railway", icon: IconTrain, type: "icon" },
       { text: "GitHub Actions", icon: IconBrandGithub, type: "icon" },
       { text: "CI/CD", icon: IconCloud, type: "icon" },
     ],
   },
   {
-    title: "Integrations",
+    title: "Integrations & Observability",
     skills: [
       { text: "Shopify", icon: IconPlugConnected, type: "icon" },
       { text: "Razorpay", icon: IconPlugConnected, type: "icon" },
       { text: "Google Maps", icon: IconPlugConnected, type: "icon" },
-      { text: "Msg91", icon: IconPlugConnected, type: "icon" },
+      { text: "PostHog", icon: IconCloud, type: "icon" },
+      { text: "Sentry", icon: IconShield, type: "icon" },
     ],
   },
 ];

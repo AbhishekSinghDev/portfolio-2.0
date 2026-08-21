@@ -60,7 +60,7 @@ const FreelanceProjects = () => {
                       {project.title}
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
+                      {project.tags.map((tag: string, tagIndex: number) => (
                         <span
                           key={tagIndex}
                           className={cn(
@@ -84,7 +84,7 @@ const FreelanceProjects = () => {
                       Tech Stack
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => {
+                      {project.tech.map((tech: any, techIndex: number) => {
                         const Icon = tech.icon;
                         return (
                           <div

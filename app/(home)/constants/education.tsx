@@ -4,9 +4,9 @@ export const EDUCATION = [
     degree: "Master of Computer Applications (MCA)",
     field: "Specialization in Generative AI",
     institution: "SRM Institute of Science and Technology",
-    location: "Chennai, India",
+    location: "Online",
     period: "September 2025 – September 2027",
-    grade: "CGPA: 10/10",
+    grade: "CGPA: 10.0",
   },
   {
     degree: "Bachelor of Computer Applications (BCA)",

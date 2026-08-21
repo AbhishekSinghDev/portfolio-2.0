@@ -98,7 +98,7 @@ const PersonalProjects = () => {
                           {isImageIcon ? (
                             <div className="relative w-3.5 h-3.5">
                               <Image
-                                src={Icon as string}
+                                src={Icon as unknown as string}
                                 alt={tech.name}
                                 fill
                                 className="object-contain"

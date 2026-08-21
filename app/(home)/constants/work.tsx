@@ -5,6 +5,7 @@ export const WORK_EXPERIENCES = [
     role: "Full Stack Engineer",
     location: "Haryana, India",
     project: "Earnex Rewards - Loyalty Rewards Platform",
+    period: "September 2025 – June 2026",
     highlights: [
       "Built the core architecture for Earnex Rewards, a multi-tenant loyalty platform designed to onboard multiple brand partners onto a shared codebase, structured as 5 apps (API server, admin dashboard, brand portal, marketing site, mobile app) inside a single Turborepo monorepo sharing one schema and validation layer, with a role-segregated data model (separate schemas for customer, brand, and admin personas) keeping auth and permission logic isolated per role",
       "Built a 6-stage automated receipt verification pipeline (LLM OCR, image authenticity checks, EXIF metadata validation, duplicate detection, automated decisioning) to replace manual review, with each stage run as a tracked, independently auditable background job",
@@ -28,11 +29,12 @@ export const WORK_EXPERIENCES = [
     company: "Nextfly Technologies Pvt. Ltd.",
     role: "Full Stack Developer",
     location: "Haryana, India",
-    project: "Scraplo & MyDeer",
+    project: "Scraplo - Scrap Collection Marketplace",
+    period: "August 2024 – August 2025",
     highlights: [
       "Built Scraplo, a scrap-collection logistics marketplace supporting 5 distinct user types, each with its own schema (customer, driver, admin, and others), keeping auth, permissions, and business logic cleanly isolated per persona across the pickup flow: scheduling, auto-assignment, weighing, and payout",
       "Built a geolocation-based driver-assignment algorithm using the Haversine formula to match available drivers within a 5 km radius, with live pickup tracking via Google Maps polling for route and ETA visibility",
-      "Built a Razorpay-backed digital wallet for delivery personnel covering earnings, withdrawals, reconciliation, and transaction history",
+      "Built a Razorpay-backed digital wallet for delivery personnel covering earnings, withdrawals, and reconciliation, with transaction history tied directly to order completion for automated payouts",
     ],
     tech: [
       "Next.js",

@@ -7,19 +7,19 @@ export const PERSONAL_INFO = {
   location: "Delhi, India",
   availability: "Available for opportunities",
   resumeLink:
-    "https://drive.google.com/file/d/1j2NUnefLendo7pSPCCnCfMzTLRtHbdbP/view?usp=sharing",
+    "https://drive.google.com/file/d/1kYBY3-0RtbzjOL4J1Sj04eYa1Q_QpBlV/view",
   description:
-    "Full Stack Engineer building production systems in TypeScript and Node.js. Experienced in designing multi-tenant SaaS backends, AI-integrated data pipelines, real-time systems, and monorepo architectures. Built youth-af.com, a live platform handling 1000+ daily active users, 1M+ page views, and INR 50,000+ in revenue.",
+    "Full Stack Engineer with 2 years of experience building production systems in TypeScript and Node.js, including multi-tenant SaaS backends, AI-integrated data pipelines, and real-time systems. Independently built and shipped youth-af.com, a live platform with 11,000+ registered users, 1.22M+ page views, and INR 59,000+ in revenue.",
 };
 
 // ==================== HERO SECTION ====================
 export const HERO_DESCRIPTION = {
-  text: "Crafting scalable web & mobile applications",
+  text: "Building production systems in TypeScript & Node.js",
   company: "",
   specializations: [
-    "AI-powered pipelines",
-    "event-driven workflows",
-    "payments and integrations",
+    "multi-tenant SaaS backends",
+    "AI-integrated data pipelines",
+    "real-time systems",
   ],
 };
 
